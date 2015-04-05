@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package net.johnboehr.netbeans.handlebars.lexer;
 
 import org.netbeans.spi.lexer.Lexer;
@@ -18,11 +14,12 @@ public class HandlebarsLexer implements Lexer<HandlebarsTokenId> {
     
     final private LexerRestartInfo<HandlebarsTokenId> info;
     final private HbsLexer hbsLexer;
+    final private AntlrCharStream stream;
 
     HandlebarsLexer(LexerRestartInfo<HandlebarsTokenId> info) {
         this.info = info;
-        AntlrCharStream stream = new AntlrCharStream(info.input(), "HandlebarsLexer");
-        this.hbsLexer = new HbsLexer(stream);
+        this.stream = new AntlrCharStream(info.input(), "HandlebarsLexer");
+        this.hbsLexer = new HbsLexer(this.stream);
     }
 
     @Override
@@ -42,5 +39,6 @@ public class HandlebarsLexer implements Lexer<HandlebarsTokenId> {
 
     @Override
     public void release() {
+        
     }
 }

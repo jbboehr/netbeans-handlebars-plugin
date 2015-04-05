@@ -31,6 +31,8 @@ public class HandlebarsParser extends Parser {
     @Override
     public void parse (Snapshot snapshot, Task task, SourceModificationEvent event) {
         this.snapshot = snapshot;
+        this.error = null;
+        this.tree = null;
         
         Reader reader = new StringReader(snapshot.getText().toString ());
         
