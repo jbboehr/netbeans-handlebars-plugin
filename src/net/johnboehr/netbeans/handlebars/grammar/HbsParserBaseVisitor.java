@@ -66,6 +66,14 @@ public class HbsParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitWsfix2(@NotNull HbsParser.Wsfix2Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitSubexpression(@NotNull HbsParser.SubexpressionContext ctx) { return visitChildren(ctx); }
 
 	/**
@@ -75,6 +83,14 @@ public class HbsParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitElseBlock(@NotNull HbsParser.ElseBlockContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitWsfix1(@NotNull HbsParser.Wsfix1Context ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}

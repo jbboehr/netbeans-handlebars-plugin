@@ -144,12 +144,16 @@ param
   | INT           #intParam
   | BOOLEAN       #boolParam
   | QID           #refPram
-  | LP sexpr RP #subexpression
+  | LP sexpr RP   #subexpression
+  | param WS      #wsfix1
+  | WS param      #wsfix2
   ;
 
 hash
   :
     QID EQ hashValue
+  | hash WS
+  | WS hash
   ;
 
 hashValue

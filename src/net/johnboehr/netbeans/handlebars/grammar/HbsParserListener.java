@@ -81,6 +81,19 @@ public interface HbsParserListener extends ParseTreeListener {
 	void exitBody(@NotNull HbsParser.BodyContext ctx);
 
 	/**
+	 * Enter a parse tree produced by the {@code wsfix2}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void enterWsfix2(@NotNull HbsParser.Wsfix2Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code wsfix2}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void exitWsfix2(@NotNull HbsParser.Wsfix2Context ctx);
+
+	/**
 	 * Enter a parse tree produced by the {@code subexpression}
 	 * labeled alternative in {@link HbsParser#param}.
 	 * @param ctx the parse tree
@@ -103,6 +116,19 @@ public interface HbsParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitElseBlock(@NotNull HbsParser.ElseBlockContext ctx);
+
+	/**
+	 * Enter a parse tree produced by the {@code wsfix1}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void enterWsfix1(@NotNull HbsParser.Wsfix1Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code wsfix1}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void exitWsfix1(@NotNull HbsParser.Wsfix1Context ctx);
 
 	/**
 	 * Enter a parse tree produced by the {@code intParam}

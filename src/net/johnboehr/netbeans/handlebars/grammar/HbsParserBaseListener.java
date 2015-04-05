@@ -95,6 +95,19 @@ public class HbsParserBaseListener implements HbsParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterWsfix2(@NotNull HbsParser.Wsfix2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWsfix2(@NotNull HbsParser.Wsfix2Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterSubexpression(@NotNull HbsParser.SubexpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -115,6 +128,19 @@ public class HbsParserBaseListener implements HbsParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElseBlock(@NotNull HbsParser.ElseBlockContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWsfix1(@NotNull HbsParser.Wsfix1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWsfix1(@NotNull HbsParser.Wsfix1Context ctx) { }
 
 	/**
 	 * {@inheritDoc}

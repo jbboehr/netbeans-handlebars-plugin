@@ -57,6 +57,14 @@ public interface HbsParserVisitor<T> extends ParseTreeVisitor<T> {
 	T visitBody(@NotNull HbsParser.BodyContext ctx);
 
 	/**
+	 * Visit a parse tree produced by the {@code wsfix2}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWsfix2(@NotNull HbsParser.Wsfix2Context ctx);
+
+	/**
 	 * Visit a parse tree produced by the {@code subexpression}
 	 * labeled alternative in {@link HbsParser#param}.
 	 * @param ctx the parse tree
@@ -70,6 +78,14 @@ public interface HbsParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitElseBlock(@NotNull HbsParser.ElseBlockContext ctx);
+
+	/**
+	 * Visit a parse tree produced by the {@code wsfix1}
+	 * labeled alternative in {@link HbsParser#param}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWsfix1(@NotNull HbsParser.Wsfix1Context ctx);
 
 	/**
 	 * Visit a parse tree produced by the {@code intParam}
