@@ -259,7 +259,7 @@ PATH_SEGMENT
   ;
 
 WS_PATH
-  : [ \t\r\n]
+  : [ \t\r\n] -> skip
   ;
 
 mode VAR;
@@ -361,6 +361,6 @@ RP
   ;
 
 WS
- : [ \t\r\n]
+ : [ \t\r\n] -> skip
  ;
 
