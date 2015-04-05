@@ -7,7 +7,7 @@ package net.johnboehr.netbeans.handlebars.lexer;
 
 import org.netbeans.spi.lexer.Lexer;
 import org.netbeans.spi.lexer.LexerRestartInfo;
-import com.github.jknack.handlebars.internal.HbsLexer;
+import net.johnboehr.netbeans.handlebars.grammar.HbsLexer;
 import org.antlr.v4.runtime.Token;
 
 /**

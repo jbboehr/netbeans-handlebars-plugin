@@ -106,7 +106,9 @@
                     </run-dependency>
                 </dependency>
             </module-dependencies>
-            <public-packages/>
+            <public-packages>
+                <package>net.johnboehr.netbeans.handlebars.grammar</package>
+            </public-packages>
             <class-path-extension>
                 <runtime-relative-path>ext/handlebars-2.0.0.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/handlebars-2.0.0.jar</binary-origin>

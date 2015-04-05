@@ -5,7 +5,7 @@
  */
 package net.johnboehr.netbeans.handlebars.lexer;
 
-import com.github.jknack.handlebars.internal.HbsLexer;
+import net.johnboehr.netbeans.handlebars.grammar.HbsLexer;
 
 /**
  *
@@ -42,10 +42,7 @@ public enum TokenType {
     LP(HbsLexer.LP, "LP"),
     RP(HbsLexer.RP, "RP"),
     WS(HbsLexer.WS, "WS"),
-//    SET_DELIMS(HbsLexer.SET_DELIMS, "SET_DELIMS"),
-//    PARTIAL(HbsLexer.PARTIAL, "PARTIAL"),
-//    VAR(HbsLexer.VAR, "VAR")
-    
+    ERR_CHAR(HbsLexer.ERR_CHAR, "ERR_CHAR"),
     EOF(0, "EOF");
     
     public int id;

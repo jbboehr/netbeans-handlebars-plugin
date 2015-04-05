@@ -5,4 +5,22 @@
 <project name="net.johnboehr.netbeans.handlebars" default="netbeans" basedir=".">
     <description>Builds, tests, and runs the project net.johnboehr.netbeans.handlebars.</description>
     <import file="nbproject/build-impl.xml"/>
+    
+    <target name="antlr">
+        <property name="antlr.grammar" location="src/net/johnboehr/netbeans/handlebars/grammar/HbsLexer.g4"/>
+        <property name="antlr.parserdir" location="src/net/johnboehr/netbeans/handlebars/grammar/"/>
+        
+        <mkdir dir="${antlr.parserdir}"/>
+        <echo level="info">Criando Classes ANTLR</echo>
+        <!-- Gera os arquivos -->
+        <java classname="org.antlr.v4.Tool"  fork="true">
+            <arg line="-o ${antlr.parserdir}"/>
+            <!-- Cria tb as casses para padrão Visitor -->
+            <arg line="-visitor"/>
+            <arg value="${antlr.grammar}"/>
+            <arg value="-package"/>
+            <arg value="net.johnboehr.netbeans.handlebars.grammar"/>
+            <classpath path="${antlr.jar}"/>
+        </java>        
+    </target>
 </project>
