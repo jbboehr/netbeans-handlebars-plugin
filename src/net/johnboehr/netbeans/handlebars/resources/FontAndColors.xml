@@ -2,16 +2,52 @@
     "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN"
     "https://netbeans.org/dtds/EditorFontsColors-1_1.dtd">
 <fontscolors>
+    <fontcolor name="TEXT" default="string"/>
+    
     <fontcolor name="COMMENT" foreColor="magenta" default="comment"/>
     <fontcolor name="INT" default="number"/>
     <fontcolor name="BOOLEAN" default="number"/>
     
-    <!--
+    <fontcolor name="PATH" default="identifier"/>
+    <fontcolor name="QID" default="identifier"/>
+    
+    <fontcolor name="DOUBLE_STRING" default="string"/>
+    <fontcolor name="SINGLE_STRING" default="string"/>
+    
+    <fontcolor name="ESC_VAR" default="keyword"/>
+    <fontcolor name="START_AMP" default="keyword"/>
+    <fontcolor name="START_T" default="keyword"/>
+    <fontcolor name="UNLESS" default="keyword"/>
+    <fontcolor name="START_BLOCK" default="keyword"/>
+    <fontcolor name="START_DELIM" default="keyword"/>
+    <fontcolor name="START_PARTIAL" default="keyword"/>
+    <fontcolor name="END_BLOCK" default="keyword"/>
+    <fontcolor name="END_DELIM" default="keyword"/>
+    <fontcolor name="WS_DELIM" default="keyword"/>
+    <fontcolor name="DELIM" default="keyword"/>
+    <fontcolor name="END_T" default="keyword"/>
+    <fontcolor name="END" default="keyword"/>
+    <fontcolor name="ELSE" default="keyword"/>
+    <fontcolor name="LP" default="keyword"/>
+    <fontcolor name="RP" default="keyword"/>
+    
+    <fontcolor name="EQ" default="operator"/>
+    
+    <fontcolor name="SPACE" default="whitespace"/>
+    <fontcolor name="NL" default="whitespace"/>
+    <fontcolor name="WS_PATH" default="whitespace"/>
+    <fontcolor name="WS" default="whitespace"/>
+    <fontcolor name="EOF" default="whitespace"/>
+    
+    <fontcolor name="ERR_CHAR" default="error"/>
+    
     <fontcolor name="character" default="char"/>
     <fontcolor name="errors" default="error"/>
     <fontcolor name="identifier" default="identifier"/>
-    <fontcolor name="keyword" default="keyword" foreColor="red"/>
+    <fontcolor name="keyword" default="keyword"/>
     <fontcolor name="literal" default="keyword" />
+    <fontcolor name="comment" default="comment"/>
+    <fontcolor name="number" default="number"/>
     <fontcolor name="operator" default="operator"/>
     <fontcolor name="string" default="string"/>
     <fontcolor name="separator" default="separator"/>
@@ -19,5 +55,4 @@
     <fontcolor name="method-declaration" default="method">
         <font style="bold" />
     </fontcolor>
-    -->
 </fontscolors>

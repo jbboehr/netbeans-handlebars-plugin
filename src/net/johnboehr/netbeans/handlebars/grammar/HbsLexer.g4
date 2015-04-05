@@ -65,8 +65,10 @@ lexer grammar HbsLexer;
   private boolean varEscape(final String start, final String end) {
     if (ahead("\\" + start)) {
       int offset = start.length();
+      int found = 0;
       while (!isEOF(offset)) {
         if (ahead(end, offset)) {
+          found = 1;
           break;
         }
         if (ahead(start, offset)) {
@@ -74,7 +76,9 @@ lexer grammar HbsLexer;
         }
         offset += 1;
       }
-      offset += end.length();
+      if( found == 1 ) {
+        offset += end.length();
+      }
       // Since we found the text, increase the CharStream's index.
       _input.seek(_input.index() + offset - 1);
       getInterpreter().setCharPositionInLine(_tokenStartCharPositionInLine + offset - 1);
@@ -237,7 +241,7 @@ PATH_SEGMENT
   ;
 
 WS_PATH
-  : [ \t\r\n] -> skip
+  : [ \t\r\n]
   ;
 
 mode VAR;
@@ -339,6 +343,6 @@ RP
   ;
 
 WS
- : [ \t\r\n] -> skip
+ : [ \t\r\n]
  ;
 

@@ -7,20 +7,32 @@
     <import file="nbproject/build-impl.xml"/>
     
     <target name="antlr">
-        <property name="antlr.grammar" location="src/net/johnboehr/netbeans/handlebars/grammar/HbsLexer.g4"/>
+        <property name="antlr.lexer" location="src/net/johnboehr/netbeans/handlebars/grammar/HbsLexer.g4"/>
+        <property name="antlr.parser" location="src/net/johnboehr/netbeans/handlebars/grammar/HbsParser.g4"/>
         <property name="antlr.parserdir" location="src/net/johnboehr/netbeans/handlebars/grammar/"/>
         
         <mkdir dir="${antlr.parserdir}"/>
-        <echo level="info">Criando Classes ANTLR</echo>
-        <!-- Gera os arquivos -->
+        
+        <echo level="info">ANTLR</echo>
+        
         <java classname="org.antlr.v4.Tool"  fork="true">
             <arg line="-o ${antlr.parserdir}"/>
             <!-- Cria tb as casses para padrão Visitor -->
             <arg line="-visitor"/>
-            <arg value="${antlr.grammar}"/>
+            <arg value="${antlr.lexer}"/>
             <arg value="-package"/>
             <arg value="net.johnboehr.netbeans.handlebars.grammar"/>
             <classpath path="${antlr.jar}"/>
-        </java>        
+        </java>
+        
+        <java classname="org.antlr.v4.Tool"  fork="true">
+            <arg line="-o ${antlr.parserdir}"/>
+            <!-- Cria tb as casses para padrão Visitor -->
+            <arg line="-visitor"/>
+            <arg value="${antlr.parser}"/>
+            <arg value="-package"/>
+            <arg value="net.johnboehr.netbeans.handlebars.grammar"/>
+            <classpath path="${antlr.jar}"/>
+        </java>
     </target>
 </project>

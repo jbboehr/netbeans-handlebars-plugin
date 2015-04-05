@@ -6,6 +6,8 @@
         <folder name="text">
             <folder name="x-handlebars">
                 <attr name="SystemFileSystem.localizingBundle" stringvalue="net.johnboehr.netbeans.handlebars.resources.Bundle"/>
+                <file name="net-johnboehr-netbeans-handlebars-parser-HandlebarsParserFactory.instance"/>
+                <file name="net-johnboehr-netbeans-handlebars-parser-HandlebarsSyntaxErrorHighlightingTaskFactory.instance"/>
                 <folder name="FontsColors">
                     <folder name="NetBeans">
                         <folder name="Defaults">
